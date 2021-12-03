@@ -1,0 +1,5 @@
+.burger-menu {
+	@include breakpoint($bp-md) {
+		display: block;
+	}
+}

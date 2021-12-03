@@ -1,0 +1,5 @@
+.footer {
+	@include breakpoint($bp-lg) {
+		padding: 1.5rem 0;
+	}
+}

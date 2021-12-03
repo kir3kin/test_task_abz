@@ -1,0 +1,44 @@
+// ====== React Transition Group plugin  ====== \\
+
+// ::: User Card || in components/Cherrful.tsx
+// .card-item-exit-active {
+// 	animation: card .8s ease-out forwards;
+// }
+// .card-item-enter-active {
+// 	animation: card .8s ease-in alternate-reverse;
+// }
+
+.card-item {
+	&-enter {
+		opacity: 0;
+
+		&-active {
+			opacity: 1;
+			transition: opacity 400ms ease-in;
+		}
+	}
+
+	&-exit {
+		opacity: 1;
+
+		&-active {
+			opacity: 0;
+			transition: opacity 400ms ease-in;
+		}
+	}
+}
+
+
+// @keyframes card {
+//   0% {
+//     transform: translateX(0)
+//   }
+//   30% {
+//     opacity: 0.7;
+//     transform: translateX(30px)
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateX(-200px);
+//   }
+// }

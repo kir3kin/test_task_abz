@@ -1,0 +1,5 @@
+.menu-sidebar {
+	@include breakpoint($bp-md) {
+		display: flex;
+	}
+}

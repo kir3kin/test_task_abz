@@ -1,0 +1,7 @@
+.tooltip {
+	@include breakpoint($bp-md) {
+		&__tip {
+		display: none;
+		}
+	}
+}

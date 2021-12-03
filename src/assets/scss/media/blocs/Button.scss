@@ -1,0 +1,7 @@
+.button {
+	@include breakpoint($bp-md) {
+		&:hover {
+			background:$primary !important;
+		}
+	}
+}

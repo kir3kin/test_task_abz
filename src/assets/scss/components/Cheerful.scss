@@ -1,0 +1,31 @@
+.cheerful {
+	padding: 0;
+	text-align: center;
+
+	&__title {
+		font-size: $heading-1-size;
+		line-height: $heading-1-lh;
+		margin-bottom: 1rem;
+		// @include text-truncattion();
+	}
+
+	&__subtitle {
+		font-size: $heading-2-size;
+		line-height: $heading-2-lh;
+		margin-bottom: 3.2rem;
+		// @include text-truncattion();
+	}
+
+	&__list {
+		display: flex;
+		flex-flow: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 3rem;
+	}
+
+	button {
+		margin-top: 5rem;
+	}
+}

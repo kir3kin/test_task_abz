@@ -1,0 +1,56 @@
+.acquainted {
+	@include breakpoint($bp-lg) {
+		margin: 17.7rem 0 17.4rem;
+
+		&__content {
+			width: 48rem;
+			padding: 0;
+		}
+
+		&__desc {
+			max-height: 13rem;
+		}
+	}
+
+	@include breakpoint($bp-md) {
+		margin-bottom: 16.6rem;
+
+		&__img {
+			background-image: url('../../../images/image-296x260.svg');
+			margin-top: -0.6rem;
+			width: 29.6rem;
+			height: 26rem;
+			background-size: cover;
+		}
+
+		&__content {
+			width: 40rem;
+			overflow: visible;
+		}
+
+		&__desc {
+			padding-left: 3.2rem;
+			max-height: 18.2rem;
+		}
+	}
+
+	@include breakpoint($bp-sm) {
+		flex-flow: column;
+		margin: 14.5rem 0 13.8rem;
+		text-align: left;
+
+		&__img {
+			width: 32.8rem;
+			height: 28.7rem;
+		}
+
+		&__content {
+			margin-top: 4rem;
+			width: 100%;
+		}
+
+		&__desc {
+			padding-left: 0;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+.banner {
+	padding: 18.5rem 0 17.8rem;
+	text-align: left;
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+
+	&::after {
+		content: "";
+		display: block;
+		width: $container-lg;
+		height: 65rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translateX(11.1rem);
+		background-image: url('../../images/banner_photo.jpg');
+		background-size: cover;
+		background-position: -22.3rem 0;
+		background-repeat: no-repeat;
+	}
+
+	&__content {
+		position: relative;
+		z-index: $banner-content-index;
+		width: 54rem;
+		overflow: hidden;
+
+		.button {
+			margin-top: 2.4rem;
+		}
+	}
+
+	&__title {
+		font-size: $heading-1-size;
+		line-height: $heading-1-lh;
+		max-height: calc($heading-1-lh * 2);
+		overflow: hidden;
+	}
+
+	&__desc {
+		margin-top: 2.1rem;
+		max-height: 10.5rem;
+		overflow: hidden;
+	}
+}

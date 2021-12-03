@@ -1,0 +1,58 @@
+// :::  Basic settings
+@import '~reset-scss';
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/fonts';
+
+// :::  Components
+@import './components/Common';
+@import './components/Header';
+@import './components/MenuSidebar';
+@import './components/Banner';
+@import './components/Acquainted';
+@import './components/Cheerful';
+@import './components/Register';
+@import './components/Footer';
+@import './components/Modal';
+
+// ::: Page button
+@import './blocs/Button';
+
+// ::: User card
+@import './blocs/UserCard';
+@import './blocs/Tooltip';
+@import './blocs/CSSTransition';
+
+// ::: Register inputs
+@import './blocs/RegisterInput';
+@import './blocs/RadioButtons';
+@import './blocs/RegisterFile';
+
+// ::: Preloader
+@import './blocs/Preloader.scss';
+
+// ::: Header burger-menu
+@import './blocs/BurgerMenu';
+
+
+// ====== Media queries ====== \\
+// :::  Components
+@import './media/components/Common';
+@import './media/components/Header';
+@import './media/components/MenuSidebar';
+@import './media/components/Banner';
+@import './media/components/Acquainted';
+@import './media/components/Cheerful';
+@import './media/components/Register';
+@import './media/components/Footer';
+@import './media/components/Modal';
+
+// ::: Page button
+@import './media/blocs/Button';
+
+// ::: User card
+@import './media/blocs/UserCard';
+@import './media/blocs/Tooltip';
+
+// ::: Header burger-menu
+@import './media/blocs/BurgerMenu';

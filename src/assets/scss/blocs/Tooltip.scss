@@ -1,0 +1,34 @@
+.tooltip {
+	position: relative;
+
+	&__tip {
+		visibility: hidden;
+		font-size: $body-size;
+		line-height: $body-lh;
+		color: $tip-color;
+		background-color: $tip-bg;
+		padding: .4rem 1.6rem .2rem;
+		width: 100%;
+		border-radius: .4rem;
+
+		text-align: center;
+		word-break: break-all;
+		
+		position: absolute;
+		z-index: $tooltip-index;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__text {
+		width: 100%;
+		display: block;
+		overflow: hidden;
+		word-break: break-word;
+	}
+
+	&:hover &__tip {
+		visibility: visible;
+	}
+}

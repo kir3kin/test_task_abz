@@ -1,0 +1,14 @@
+.card {
+	@include breakpoint($bp-lg) {
+		width: 28.2rem;
+		padding-bottom: 2.8rem;
+	}
+
+	@include breakpoint($bp-md) {
+		width: 34.4rem;
+	}
+
+	@include breakpoint($bp-sm) {
+		width: 32.8rem;
+	}
+}

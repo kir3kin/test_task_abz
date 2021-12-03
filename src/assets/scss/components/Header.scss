@@ -1,0 +1,38 @@
+.header {
+	height: 6rem;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+
+	&__logo {
+		display: block;
+		height: 2.6rem;
+		min-width: 10.4rem;
+		background-image: url('../../images/logo.svg');
+	}
+
+	&__nav {
+		display: flex;
+		overflow: hidden;
+		justify-content: center;
+		margin-right: -1.9rem;
+
+		&__link {
+			padding: 0.7rem 1.55rem;
+			line-height: $body-lh;
+			white-space: nowrap;
+
+			&:hover {
+				cursor: pointer;
+				color: $secondary;
+				background-color: $nav-hover-bg;
+			}
+			
+			&:active {
+				color: $secondary;
+			}
+		}
+	}
+}

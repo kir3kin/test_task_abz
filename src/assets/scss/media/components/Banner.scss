@@ -1,0 +1,54 @@
+.banner {
+	@include breakpoint($bp-lg) {
+
+		&::after {
+			transform: translateX(24.4rem);
+		}
+	}
+
+	@include breakpoint($bp-md) {
+		padding: 8.1rem 0 7.2rem;
+
+		&::after {
+			width: $container-md;
+			height: 50rem;
+			transform: translateX(37.1rem);
+		}
+
+		&__content {
+			width: 42rem;
+
+			.button {
+				margin-top: 3.1rem;
+			}
+		}
+
+		&__desc {
+			margin-top: 2.2rem;
+			max-height: 15.6rem;
+		}
+	}
+
+	@include breakpoint($bp-sm) {
+		padding: 5rem 0;
+
+		&::after {
+			transform: translateX(47.2rem);
+			background-size: 80rem 38rem;
+			background-position: 0 11rem;
+		}
+
+		&__content {
+			width: 24rem;
+		}
+
+		&__title {
+			max-height: calc($heading-1-lh * 4);
+		}
+		
+		&__desc {
+			max-height: 10.4rem;
+		}
+	}
+
+}

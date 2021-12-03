@@ -1,0 +1,44 @@
+.acquainted {
+	margin: 18.3rem 0 18.7rem;
+	text-align: right;
+	background-size: contain;
+	background-position: 0 0;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+
+	
+	&__img {
+		width: 38.7rem;
+		height: 34rem;
+		background-image: url('../../images/image-387x340.svg');
+	}
+
+	&__content {
+		width: 68rem;
+		overflow: hidden;
+		padding: 2rem 0 1.4rem;
+
+		.button {
+			margin-top: 3.2rem;
+		}
+	}
+
+	&__title {
+		font-size: $heading-1-size;
+		line-height: $heading-1-lh;
+	}
+
+	&__subtitle {
+		font-size: $heading-2-size;
+		line-height: $heading-2-lh;
+		margin-top: 1rem;
+	}
+
+	&__desc {
+		margin-top: 2rem;
+		max-height: 10.5rem;
+		overflow: hidden;
+	}
+}

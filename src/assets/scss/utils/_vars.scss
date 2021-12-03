@@ -1,0 +1,91 @@
+// ====== Font sizes ========================
+$heading-1-size: 4rem;// 40px
+$heading-1-lh: 4rem;// 40px
+
+$heading-2-size: 2.2rem;// 22px
+$heading-2-lh: 2.8rem;// 28px
+
+$body-size: 1.6rem;// 16px
+$body-lh: 2.6rem;// 26px
+
+$input-helper-size: 1.2rem;// 12px
+$input-helper-lh: 1.7rem;// 17px
+
+$modal-header-lh: 3.1rem;
+
+
+// ====== Font families ========================
+$font-header: 'Nunito', Arial, Helvetica, sans-serif;
+$font-body: 'Asap', Arial, Helvetica, sans-serif;
+
+
+// ====== Media breakpoints ========================
+$bp-lg: 1200px;
+$bp-md: 1024px;
+$bp-sm: 768px;
+
+
+// ====== Screen sizes ========================
+$container-lg: 1170px;
+$container-md: 1024px;
+$container-sm: 768px;
+$container-xs: 360px;
+
+$min-width: 360px;
+$max-width: 2560px;
+
+
+// ====== Colors ========================
+$text-color: #000000;
+$primary: #F4E041;
+$secondary: #00BDD3;
+
+// ::: header nav ::: \\
+$nav-hover-bg: #00bdd31a;
+
+// ::: input[:normal] ::: \\
+$input-bd-enabled: #D0CFCF; 
+$input-filled: #000000;
+$input-empty: #7E7E7E;
+$input-disable: #BCBCBC;
+$input-error: #CB3D40;
+
+
+// ::: button ::: \\
+// #FFE302 - hard to notice difference with $primary
+$button-hover-bg: #eeff41; 
+$button-disabled-bg: #B4B4B4;
+$button-disabled-txt: #FFFFFF;
+
+// ::: button ::: \\
+
+// ::: card ::: \\
+$card-bg: #FFFFFF;
+
+// ::: menu sidebar ::: \\
+$menu-wrapper-bg: #000000;
+$menu-content-bg: #FFFFFF;
+
+
+// ::: basic ::: \\
+$primary-bg: #F8F8F8;
+$header-bg: #FFFFFF;
+$banner-bg: #EDECEA;
+$footer-bg: #FFFFFF;
+$modal-bg: #FFFFFF;
+$tip-bg: #232F34;
+$tip-color: #FFFFFF;
+
+
+// ====== z-indexes ========================
+// $header-index: 1;
+$banner-content-index: 1;
+$tooltip-index: 5;
+$header-index: 7;
+$menu-sidebar-index: 8;
+$modal-index: 10;
+
+
+// ====== transitions ========================
+$button-trn: .2s linear;
+$preloader-trn: .5s linear infinite;
