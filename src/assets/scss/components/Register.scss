@@ -1,5 +1,5 @@
 .register {
-	margin: 9.5rem 0 18rem;
+	margin: 1rem 0 18rem;
 	padding-top: 8rem;
 	text-align: center;
 	position: relative;
@@ -15,7 +15,7 @@
 		z-index: 0;
 
 		transform: translateX(68.8rem);
-		background-image: url('../../images/footprint-972x177.svg');
+		background-image: url('../../images/footprint.svg');
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: 0 .4rem;
@@ -24,14 +24,12 @@
 	&__title {
 		font-size: $heading-1-size;
 		line-height: $heading-1-lh;
-		// @include text-truncattion();
 	}
 
 	&__subtitle {
 		font-size: $heading-2-size;
 		line-height: $heading-2-lh;
 		margin-top: 1rem;
-		// @include text-truncattion();
 	}
 
 	&__form {
@@ -41,7 +39,6 @@
 		flex-flow: column;
 		margin-top: 3.2rem;
 		text-align: left;
-		font-family: $font-body;
 
 		.button {
 			margin: 0 auto;
@@ -49,7 +46,7 @@
 	}
 
 	&__inputs {
-		margin-bottom: 4.9rem;
+		margin-bottom: 5rem;
 		width: 100%;
 
 		> div:not(:last-child) {

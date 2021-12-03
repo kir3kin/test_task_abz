@@ -1,7 +1,7 @@
 import { countNumber } from "./app.interface"
 
 // ../utils/consts.ts '@count' - number of downloading users | depends on screen size
-export type countUserType = {
+export type UserCountType = {
 	desktop: countNumber
 	tablet: countNumber
 	mobile: countNumber

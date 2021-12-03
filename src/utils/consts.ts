@@ -1,4 +1,4 @@
-import { countUserType, formPatterns, helperTextType } from "../interfaces/utils.interface"
+import { UserCountType, formPatterns, helperTextType } from "../interfaces/utils.interface"
 
 export const API_LINK: string = 'https://frontend-test-assignment-api.abz.agency/api/v1'
 
@@ -6,7 +6,7 @@ export const API_LINK: string = 'https://frontend-test-assignment-api.abz.agency
 export const WITDH_TABLET: string = '(max-width: 1024px)'
 export const WITDH_MOBILE: string = '(max-width: 768px)'
 
-export const countUsers: countUserType = {
+export const USERS_COUNT: UserCountType = {
 	desktop: 9,
 	tablet: 6,
 	mobile: 3

@@ -9,12 +9,11 @@
 		padding: 1.3rem 1.5rem;
 		border: 1px solid $input-bd-enabled;
 		border-radius: .4rem;
-		background-color: transparent;
+		background-color: transparent !important;
 		line-height: $body-lh;
 
 		&::placeholder {
 			color: transparent;
-			font-family: $font-body;
 		}
 	}
 
@@ -66,7 +65,7 @@
 		left: 1.2rem;
 		top: -50%;
 		transform: translateY(58%);
-		background-color: $primary-bg;
+		background-color: $primary-bg !important;
 		height: auto;
 	}
 
@@ -104,7 +103,7 @@
 			left: 1.2rem;
 			top: -50%;
 			transform: translateY(58%);
-			background-color: $primary-bg;
+			background-color: $primary-bg !important;
 			height: auto;
 		}
 	

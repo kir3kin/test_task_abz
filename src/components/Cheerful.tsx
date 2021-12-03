@@ -1,17 +1,38 @@
-import React from "react"
-
-import { useAppDispatch, useAppSelector } from "../redux/hooks"
-import { getNextUsers, selectAppInfo, selectUsersInfo } from "../redux/reducers/appSlice"
+import React, { useEffect, useMemo } from "react"
+import { useMediaQuery } from "react-responsive"
 
 import { UserCard } from "./blocs/UserCard"
 import { Preloader } from "./blocs/Preloader"
 
+import { useAppDispatch, useAppSelector } from "../redux/hooks"
+import { getNextUsers, getUsers, selectAppInfo, selectUsersInfo, setCount } from "../redux/reducers/appSlice"
+
 import { TransitionGroup, CSSTransition } from "react-transition-group"
+
+import { USERS_COUNT, WITDH_MOBILE, WITDH_TABLET } from "../utils/consts"
 
 export const Cheerful: React.FC = () => {
 	const dispatch = useAppDispatch()
   const { users, status } = useAppSelector(selectUsersInfo)
 	const { lastPage: hideButton } = useAppSelector(selectAppInfo)
+
+ // ::: [START:] screen size check ::: \\
+	const tablet = useMediaQuery({ query: WITDH_TABLET})
+	const mobile = useMediaQuery({ query: WITDH_MOBILE})
+
+	// @count - amount of users which will be downloaded per one request
+	const count = useMemo(() => {
+		return tablet ? ( mobile ? (USERS_COUNT.mobile) : (USERS_COUNT.tablet) ) : (USERS_COUNT.desktop)
+	}, [tablet, mobile])
+// ::: [END:] screen size check ::: \\
+
+  useEffect(()=> {
+    // set number of downloading users, before fetching them
+    dispatch(setCount(count))
+    // fetching users 
+    dispatch(getUsers(false))
+  }, [dispatch])
+
 
 	return (
 		<section className="wrapper">

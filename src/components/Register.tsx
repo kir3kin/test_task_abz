@@ -15,11 +15,12 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { fileInfoType, iForm } from "../interfaces/register.interface"
 
 
-export const Register: React.FC = () => {
+const Register: React.FC = () => {
 	const dispatch = useAppDispatch()
 	const { positions, status } = useAppSelector(selectPositionsInfo)
 	const { showModal } = useAppSelector(selectAppInfo)// After registration
 	const { error: registerError } = useAppSelector(selectError)
+
 
 	// ::: [START:] Default Values ::: \\
 	const DefaultfileName: string = 'Upload your photo'
@@ -46,6 +47,7 @@ export const Register: React.FC = () => {
 	
 	// show form button "Sign up" only if each form input has a value
 	const enabled = useMemo(() => {
+		if (Object.keys(watchAll).length === 0) return false
 		return Object.keys(watchAll).every(key => {
 			if (key === 'photo') return !!watchAll[key].length
 			return !!watchAll[key]
@@ -149,7 +151,7 @@ export const Register: React.FC = () => {
 								{errors.photo && (<span>{errors.photo.message}</span>)}
 							</div>
 
-						</div>{/* ./register__inputs */}
+						</div>{/* .close/register__inputs */}
 
 						<button
 							className="button"
@@ -165,3 +167,5 @@ export const Register: React.FC = () => {
 		</section>
 	)
 }
+
+export default Register

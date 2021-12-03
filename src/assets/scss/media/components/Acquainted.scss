@@ -1,6 +1,6 @@
 .acquainted {
 	@include breakpoint($bp-lg) {
-		margin: 17.7rem 0 17.4rem;
+		margin: 17.7rem 0 8.9rem;
 
 		&__content {
 			width: 48rem;
@@ -13,7 +13,7 @@
 	}
 
 	@include breakpoint($bp-md) {
-		margin-bottom: 16.6rem;
+		margin-bottom: 8.1rem;
 
 		&__img {
 			background-image: url('../../../images/image-296x260.svg');
@@ -36,7 +36,7 @@
 
 	@include breakpoint($bp-sm) {
 		flex-flow: column;
-		margin: 14.5rem 0 13.8rem;
+		margin: 14.5rem 0 7.3rem;
 		text-align: left;
 
 		&__img {
