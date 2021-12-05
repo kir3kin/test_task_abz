@@ -1,10 +1,10 @@
-import React, { useEffect, useMemo } from "react"
+import React, { useMemo } from "react"
 
 import { Modal } from "./Modal"
 import { Preloader } from "../blocs/Preloader"
 
 import { useAppDispatch, useAppSelector } from "../redux/hooks"
-import { getPositions, getToken, registerUser, selectAppInfo, selectError, selectPositionsInfo } from "../redux/reducers/appSlice"
+import { registerUser, selectAppInfo, selectError, selectPositionsInfo } from "../redux/reducers/appSlice"
 
 import { HELPER_TEXT } from "../utils/consts"
 import { getPositionFor, returnClassName } from "../utils/servises"
@@ -25,11 +25,6 @@ const Register: React.FC = () => {
 	const { positions, status } = useAppSelector(selectPositionsInfo)
 	const { showModal } = useAppSelector(selectAppInfo)// After registration
 	const { error: registerError } = useAppSelector(selectError)
-
-  useEffect(()=> {
-		// fetching token and positions respectively
-		if (Object.keys(positions).length === 0) dispatch(getPositions())
-	}, [dispatch])
 
 	// ::: [START:] Default Values ::: \\
 	const DefaultfileName: string = 'Upload your photo'
@@ -66,7 +61,6 @@ const Register: React.FC = () => {
 
 	// ::: [START:] Form handlers ::: \\
 	const onSubmit: SubmitHandler<iForm> = (data) => {
-		dispatch(getToken())
 		const sendData = new FormData()
 		sendData.append('name', data.name)
 		sendData.append('email', data.email)

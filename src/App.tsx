@@ -1,4 +1,4 @@
-import React, { useCallback, lazy, Suspense } from 'react'
+import React, { useCallback, lazy, Suspense, useEffect } from 'react'
 
 import '@scss/App'
 
@@ -6,11 +6,18 @@ import { Header } from './components/Header'
 import { Banner } from './components/Banner'
 import { Preloader } from './blocs/Preloader'
 
-import { useAppSelector } from './redux/hooks'
-import { selectAppInfo } from './redux/reducers/appSlice'
+import { useAppDispatch, useAppSelector } from './redux/hooks'
+import { getPositions, getToken, selectAppInfo } from './redux/reducers/appSlice'
 
 export const App: React.FC = () => {
   const { hideScroll, showSideMenu } = useAppSelector(selectAppInfo)
+  const dispatch = useAppDispatch()
+
+  useEffect(()=> {
+		// fetching token and positions respectively
+		dispatch(getToken())
+		dispatch(getPositions())
+	}, [dispatch])
 
   // disable | enable scrolling
   const toggleScroll = useCallback((hide: boolean): void => {
