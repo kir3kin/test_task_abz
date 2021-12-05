@@ -1,0 +1,19 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.header {
+	@include breakpoint($bp-lg) {
+		&__nav {
+			margin-right: -1.7rem;
+		}
+	}
+
+	@include breakpoint($bp-md) {
+		padding: 1.7rem 0;
+
+		&__nav {
+			display: none;
+		}
+	}
+}

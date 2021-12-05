@@ -1,0 +1,71 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $font-header;
+	font-size: $body-size;
+	line-height: $body-lh;
+	color: $text-color;
+	background-color: $primary-bg;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+// disable scroll for side menu & modal windows
+.no-scroll {
+	overflow: hidden !important;
+}
+
+.wrapper {
+	max-width: $max-width;
+	min-width: $min-width;
+	width: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+
+	&--header {
+		box-shadow: 0 1px 10px rgba(0,0,0,.3);
+		position: relative;
+		z-index: $header-index;
+		overflow: hidden;
+		background-color: $header-bg;
+		position: relative;
+	}
+
+	// for top menu during scroll
+	&--fixed {
+		position: fixed;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&--fixed ~ &--banner {
+		margin-top: 6rem;
+	}
+	// for top menu during scroll
+
+	&--banner {
+		background-color: $banner-bg;
+		overflow: hidden;
+	}
+
+	&--register {
+		overflow: hidden;
+	}
+
+	&--footer {
+		background-color: $footer-bg;
+		border-top: 1px solid #E0E0E0;
+	}
+}
+
+.container {
+	position: relative;
+	width: $container-lg;
+	margin: 0 auto;
+	height: auto;
+}

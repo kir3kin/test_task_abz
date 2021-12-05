@@ -1,0 +1,37 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.register {
+	@include breakpoint($bp-lg) {
+		&::after {
+			background-position: 0 0;
+			transform: translateX(49.6rem);
+			background-size: cover;
+		}
+	}
+
+	@include breakpoint($bp-md) {
+		&::after {
+			background-position: 0 0;
+			transform: translateX(27rem);
+			background-size: cover;
+		}
+	}
+
+	@include breakpoint($bp-sm) {
+		margin: 0 0 14.9rem;
+
+		&::after {
+			transform: translateX(2rem);
+			width: 62.8rem;
+			height: 15rem;
+			background-position: 0 0;
+			background-size: 62.8rem 12.4rem;
+		}
+
+		&__form {
+			width: 100%;
+		}
+	}
+}

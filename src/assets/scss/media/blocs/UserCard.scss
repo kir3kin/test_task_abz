@@ -1,0 +1,28 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.card {
+	@include breakpoint($bp-lg) {
+		width: 28.2rem;
+		padding-bottom: 2.8rem;
+
+		// &__title {
+	}
+
+	@include breakpoint($bp-md) {
+		width: 34.4rem;
+
+		&__title {
+			margin-top: 1.7rem;
+		}
+	}
+
+	@include breakpoint($bp-sm) {
+		width: 32.8rem;
+
+		&__title {
+			margin-top: 1.6rem;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.modal {
+	@include breakpoint($bp-sm) {
+		&__content {
+			width: 32.8rem;
+		}
+		
+		&__text {
+			max-height: calc($body-lh * 4);
+			overflow: hidden;
+		}
+	}
+}

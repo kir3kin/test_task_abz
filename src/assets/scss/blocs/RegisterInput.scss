@@ -1,0 +1,168 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.register__input {
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+
+	// ====== enabled-empty ====== \\
+	input {
+		padding: 1.3rem 1.5rem;
+		border: 1px solid $input-bd-enabled;
+		border-radius: .4rem;
+		background-color: transparent;
+		outline: none;
+		line-height: $body-lh;
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover, 
+		&:-webkit-autofill:focus, 
+		&:-webkit-autofill:active {
+			box-shadow: 0 0 0 30px $primary-bg inset !important;
+			-webkit-box-shadow: 0 0 0 30px $primary-bg inset !important;
+		}
+
+		&::placeholder {
+			color: transparent;
+		}
+	}
+
+	label {
+		padding: 1.5rem 1.6rem;
+		color: $input-empty;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include text-truncation();
+	}
+
+	input,
+	label {
+		font-family: $font-header;
+		font-size: $body-size;
+		line-height: $body-lh;
+	}
+
+	span {
+		font-size: $input-helper-size;
+		line-height: $input-helper-lh;
+		max-height: calc($input-helper-lh * 2);
+		position: absolute;
+		overflow: hidden;
+		top: calc(100% + .5rem);
+		left: 0;
+		padding: 0 1.6rem;
+		display: none;
+		word-break: break-word;
+	}
+
+	input, label {
+		height: 5.4rem;
+	}
+
+	label, span {
+		max-width: 100%;
+	}
+
+	// ====== active && active-filled ====== \\
+	input:focus {
+		padding: 1.4rem 1.4rem !important;
+		border: 2px solid $secondary !important;
+
+		&::placeholder {
+			color: $input-empty;
+		}
+	}
+
+	input:focus ~ label {
+		font-size: $input-helper-size;
+		line-height: $input-helper-lh;
+		color: $secondary !important;
+		padding: 0.4rem;
+		left: 1.2rem;
+		top: -50%;
+		transform: translateY(58%);
+		background-color: $primary-bg;
+		height: auto;
+	}
+
+	input:focus ~ span {
+		color: $input-filled;
+	}
+
+	// ====== disabled ====== \\
+	input:disabled {
+		border-color: $input-disable;
+	}
+
+	input:disabled, input:disabled ~ label, input:disabled ~ span {
+		color: $input-disable;
+	}
+
+
+	// ====== enabled filled ====== \\
+	/***
+		1) turning on by adding class "filled" to relevant input wrapper in React component, after [value was changed]
+		2) remove class "filled", if input is empty
+	*/
+	// &.filled {
+
+		input:not(:placeholder-shown) {
+			padding: 1.3rem 1.5rem;
+			border: 1px solid $input-bd-enabled;
+		}
+	
+		input:not(:placeholder-shown) ~ label {
+			font-size: $input-helper-size;
+			line-height: $input-helper-lh;
+			color: $input-empty;
+			padding: 0.4rem;
+			left: 1.2rem;
+			top: -50%;
+			transform: translateY(58%);
+			background-color: $primary-bg;
+			height: auto;
+		}
+	
+		input:not(:placeholder-shown) ~ span {
+			display: inline-block;
+		}
+	// }
+
+	// ====== error ====== \\
+	/***
+		turning on by adding class "error"
+		to relevant input wrapper in React component, after [validation failed]
+	*/
+	&.error {
+		input {
+			padding: 1.2rem 1.4rem;
+			border: 2px solid $input-error;
+
+			&::placeholder {
+				color: $input-empty;
+			}
+		}
+
+		label {
+			font-size: $input-helper-size;
+			line-height: $input-helper-lh;
+			color: $input-error;
+			padding: 0.4rem;
+			left: 1.2rem;
+			top: -50%;
+			transform: translateY(58%);
+			background-color: $primary-bg;
+			height: auto;
+		}
+
+		span {
+			color: $input-error;
+			display: inline-block;
+			width: 100%;
+		}
+	}
+}

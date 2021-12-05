@@ -1,0 +1,12 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.footer {
+	padding: 1.6rem 0;
+	text-align: center;
+
+	&__copy {
+		@include text-truncation();
+	}
+}

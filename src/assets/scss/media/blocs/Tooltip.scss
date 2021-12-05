@@ -1,0 +1,11 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.tooltip {
+	@include breakpoint($bp-md) {
+		&__tip {
+			display: none;
+		}
+	}
+}

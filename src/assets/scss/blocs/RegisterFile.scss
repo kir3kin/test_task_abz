@@ -1,0 +1,113 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.register__file {
+	input {
+		display: none;
+	}
+
+	// ====== enabled ====== \\
+	span {
+		font-size: $input-helper-size;
+		line-height: $input-helper-lh;
+		max-height: calc($input-helper-lh * 2);
+		overflow: hidden;
+		position: absolute;
+		top: calc(100% + .5rem);
+		left: 0;
+		padding: 0 1.6rem;
+		display: none;
+		word-break: break-word;
+	}
+
+	label {
+		position: relative;
+		display: block;
+		padding: 1.3rem 1.5rem 1.3rem 9.9rem;
+		border: 1px solid $input-bd-enabled;
+		line-height: $body-lh !important;
+		font-size: $body-size;
+		border-radius: .4rem;
+		color: $input-empty;
+		cursor: pointer;
+		@include text-truncation();
+
+		&::before {
+			content: "Upload";
+			display: block;
+			background-color: $primary-bg;
+			border: 1px solid $input-filled;
+			color: $input-filled;
+			padding: 1.3rem 1.5rem;
+			box-sizing: border-box;
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			border-radius: .4rem 0 0 .4rem ;
+		}
+
+		// ====== hover ====== \\
+		&:hover {
+			border-color: $input-filled;
+		}
+	}
+
+	// ====== disabled ====== \\
+	input:disabled ~ label {
+		border-color: $input-disable;
+		border-color: $input-disable;
+		color: $input-disable;
+		cursor: auto;
+
+		&::before {
+			border-color: $input-disable;
+				border-color: $input-disable;
+			color: $input-disable;
+		}
+	}
+
+	input:disabled ~ span {
+		color: $input-disable;
+	}
+
+
+	// ====== enabled filled ====== \\
+	/***
+		turning on by adding class "filled"
+		to relevant input wrapper in React component, after [file was added]
+		remove class "filled", if input is empty
+	*/
+	&.filled {
+		label {
+			color: $input-filled;
+		}
+
+		span {
+			display: inline-block;
+		}
+	}
+
+	// ====== error ====== \\
+	/***
+		turning on by adding class "error" to relevant input wrapper in React component, after [validation failed]
+	*/
+	&.error {
+		label {
+			border: 2px solid $input-error;
+			padding: 1.2rem 1.4rem 1.2rem 9.9rem;
+
+			&::before {
+				border: 2px solid $input-error;
+				padding: 1.2rem 1.4rem;
+				top: -2px;
+				left: -2px;
+			}
+		}
+
+		span {
+			color: $input-error;
+			display: inline-block;
+		}
+	}
+}
