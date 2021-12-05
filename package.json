@@ -1,6 +1,6 @@
 {
   "name": "webpack_interview_project",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Test Task project",
   "private": "true",
   "keywords": [
@@ -19,15 +19,9 @@
     "build": "cross-env NODE_ENV=production webpack"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0",
-    "@babel/preset-typescript": "^7.16.0",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
-    "@types/react-transition-group": "^4.4.4",
     "@types/webpack": "^5.28.0",
-    "babel-loader": "^8.2.3",
     "compression-webpack-plugin": "^9.0.1",
     "copy-webpack-plugin": "^10.0.0",
     "cross-env": "^7.0.3",
