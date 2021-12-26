@@ -1,0 +1,9 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.footer {
+	@include breakpoint($bp-lg) {
+		padding: 1.5rem 0;
+	}
+}

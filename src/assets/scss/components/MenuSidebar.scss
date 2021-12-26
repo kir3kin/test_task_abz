@@ -1,0 +1,66 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.menu-sidebar {
+	display: none;
+	
+	flex-flow: row-reverse;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $menu-sidebar-index;
+	background-color: rgba($menu-wrapper-bg, .5);
+
+	&__close {
+		width: calc(100% - 27rem);
+	}
+	
+	&__content {
+		width: 27rem;
+		background: $menu-content-bg;
+		padding: 1.6rem 0.8rem 1.6rem;
+		display: flex;
+		flex-flow: column;
+		position: relative;
+		overflow-y: scroll;
+	}
+
+	&__logo {
+		display: inline-block;
+		min-height: 2.6rem;
+		width: auto;
+		background-image: url('@images/logo.svg');
+		background-position: .8rem 0;
+		margin-bottom: 4.2rem;
+		z-index: $menu-sidebar-index;
+	}
+
+	&__nav {
+		display: flex;
+		flex-flow: column;
+		
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+
+		&__link {
+			display: inline-block;
+			border-radius: .4rem;
+			padding: 0.7rem 0.8rem;
+			font-size: $body-size;
+			line-height: $body-lh;
+			margin-bottom: .8rem;
+
+			@include text-truncation();
+			
+			&:active {
+				color: $secondary;
+				background-color: $nav-hover-bg;
+			}
+
+		}
+	}
+}

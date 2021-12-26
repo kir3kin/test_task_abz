@@ -1,0 +1,25 @@
+// :::  Basic settings
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+.cheerful {
+	@include breakpoint($bp-lg) {
+		&__list {
+			gap: 2.9rem;
+		}
+	}
+
+	@include breakpoint($bp-md) {
+		&__list {
+			gap: 1.6rem;
+		}
+	}
+
+	@include breakpoint($bp-sm) {
+		margin: 6.5rem 0;
+
+		&__list {
+			gap: 2rem;
+		}
+	}
+}

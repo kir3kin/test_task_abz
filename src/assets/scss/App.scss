@@ -1,0 +1,18 @@
+// :::  Basic settings
+@import '~reset-css';
+@import '@scss-utils/fonts';
+@import '@scss-utils/vars';
+@import '@scss-utils/mixins';
+
+
+// :::  Components
+@import './components/Common';
+// ::: Page button
+@import './blocs/Button';
+
+
+// ====== Media queries ====== \\
+// :::  Components
+@import './media/components/Common';
+// ::: Page button
+@import './media/blocs/Button';
