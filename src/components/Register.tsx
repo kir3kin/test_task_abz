@@ -1,5 +1,8 @@
 import React, { useMemo } from "react"
 
+import { SubmitHandler, useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+
 import { Modal } from "./Modal"
 import { Preloader } from "../blocs/Preloader"
 
@@ -10,8 +13,6 @@ import { HELPER_TEXT } from "../utils/consts"
 import { getPositionFor, returnClassName } from "../utils/servises"
 import { validationSchema } from "../utils/schema"
 
-import { SubmitHandler, useForm } from "react-hook-form"
-import { yupResolver } from "@hookform/resolvers/yup"
 import { fileInfoType, iForm } from "../interfaces/register.interface"
 
 import '@scss/components/Register'
@@ -19,6 +20,7 @@ import '@scss/blocs/RegisterInput'
 import '@scss/blocs/RadioButtons'
 import '@scss/blocs/RegisterFile'
 import '@scss-media/components/Register'
+
 
 const Register: React.FC = () => {
 	const dispatch = useAppDispatch()
